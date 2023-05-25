@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card id="'1">
+        <Thema>CityScape</Thema>
+        <Type Sent="true">Congratulatory</Type>
+        <Country>Belarus</Country>
+        <Year>2023</Year>
+        <Author>
+            <FirstName>Ivan</FirstName>
+            <LastName>Petrov</LastName>
+        </Author>
+        <Valuable>Thematic</Valuable>
+    </Card>
+    <Card id="'2">
+        <Thema>Nature</Thema>
+        <Type Sent="true">Congratulatory</Type>
+        <Country>USA</Country>
+        <Year>2021</Year>
+        <Author>
+            <FirstName>Oliver</FirstName>
+            <LastName>Singer</LastName>
+        </Author>
+        <Valuable>Historical</Valuable>
+    </Card>
+</Cards>
