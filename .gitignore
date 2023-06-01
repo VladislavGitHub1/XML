@@ -39,3 +39,4 @@ build/
 /src/main/java/com/chernenkov/xml/
 /xml.log
 /array.log
+/.idea/
