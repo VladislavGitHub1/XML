@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:element name="Cards">
         <xsd:complexType>
@@ -8,23 +7,17 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-        <xsd:complexType name="Card">
-            <xsd:sequence>
-                <xsd:element name="Thema" type="xsd:string" maxOccurs="unbounded"/>
-                <xsd:element name="Type" type="Type" maxOccurs="unbounded"/>
-                <xsd:element name="Country" type="Country" maxOccurs="1"/>
-                <xsd:element name="Year" type="xsd:gYear" maxOccurs="1"/>
-                <xsd:element name="Author" type="Author" maxOccurs="unbounded"/>
-                <xsd:element name="Valuable" maxOccurs="1"/>
-            </xsd:sequence>
-            <xsd:attribute name="id" type="xsd:ID" use="required"/>
-        </xsd:complexType>
-    <xsd:simpleType name="Type">
-        <xsd:restriction base="xsd:string">
-
-        </xsd:restriction>
-    </xsd:simpleType>
+    <xsd:complexType name="Card">
+        <xsd:sequence>
+            <xsd:element name="Thema" type="xsd:string" maxOccurs="unbounded"/>
+            <xsd:element name="Type" type="xsd:string" maxOccurs="unbounded"/>
+            <xsd:element name="Country" type="Country" maxOccurs="1"/>
+            <xsd:element name="Year" type="xsd:gYear" maxOccurs="1"/>
+            <xsd:element name="Author" type="Author" maxOccurs="unbounded"/>
+            <xsd:element name="Valuable" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+    </xsd:complexType>
     <xsd:simpleType name="Country">
         <xsd:restriction>
             <xsd:enumeration value="Belarus"/>

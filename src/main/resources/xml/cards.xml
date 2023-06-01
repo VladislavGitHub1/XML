@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Cards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Card id="'1">
+<Cards xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="cards.xsd">
+    <Card id="1">
         <Thema>CityScape</Thema>
-        <Type Sent="true">Congratulatory</Type>
+        <Type>Congratulatory</Type>
         <Country>Belarus</Country>
         <Year>2023</Year>
         <Author>
@@ -11,11 +11,11 @@
         </Author>
         <Valuable>Thematic</Valuable>
     </Card>
-    <Card id="'2">
+    <Card id="2">
         <Thema>Nature</Thema>
-        <Type Sent="true">Congratulatory</Type>
+        <Type>Congratulatory</Type>
         <Country>USA</Country>
-        <Year>2021</Year>
+        <Year>2023</Year>
         <Author>
             <FirstName>Oliver</FirstName>
             <LastName>Singer</LastName>
