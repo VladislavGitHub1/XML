@@ -3,7 +3,8 @@ package com.chernenkov.xml.entity;
 import java.util.List;
 
 public class Card {
-    private int id;
+    private String id;
+    private String barcode;
     private String thema;
     private String type;
     private String country;
@@ -14,7 +15,7 @@ public class Card {
     public Card() {
     }
 
-    public Card(int id, String thema, String type, String country, int year, Author author, boolean valuable) {
+    public Card(String id, String barcode, String thema, String type, String country, int year, Author author, boolean valuable) {
         this.id = id;
         this.thema = thema;
         this.type = type;
@@ -22,13 +23,14 @@ public class Card {
         this.year = year;
         this.author = author;
         this.valuable = valuable;
+        this.barcode = barcode;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -80,10 +82,19 @@ public class Card {
         this.valuable = valuable;
     }
 
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Card{");
         sb.append("id=").append(id);
+        sb.append(", barcode=").append(barcode);
         sb.append(", thema='").append(thema).append('\'');
         sb.append(", type='").append(type).append('\'');
         sb.append(", country='").append(country).append('\'');
@@ -100,6 +111,7 @@ public class Card {
 
         public Author() {
         }
+
         public Author(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;

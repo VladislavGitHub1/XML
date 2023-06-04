@@ -51,7 +51,8 @@ public class CardsDomBuilder implements CardsBuilder {
 
     private Card buildCard(Element cardElement) {
         Card card = new Card();
-        card.setId(Integer.parseInt(cardElement.getAttribute("id")));
+        card.setId(cardElement.getAttribute("id"));
+        card.setBarcode(cardElement.getAttribute("barcode"));
         card.setYear(Integer.parseInt(getElementTextContent(cardElement, "year")));
         card.setThema(getElementTextContent(cardElement, "thema"));
         card.setValuable(Boolean.parseBoolean(getElementTextContent(cardElement, "valuable")));

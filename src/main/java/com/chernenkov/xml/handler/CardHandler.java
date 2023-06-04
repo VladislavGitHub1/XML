@@ -25,7 +25,8 @@ public class CardHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
         if (ELEMENT_CARD.equals(qName)) {
             current = new Card();
-            current.setId(Integer.parseInt(attrs.getValue(0)));
+            current.setId(attrs.getValue(0));
+            current.setBarcode(attrs.getValue(1));
         } else {
             CardXmlTag temp = CardXmlTag.valueOf(qName.toUpperCase());
             if (withText.contains(temp)) {

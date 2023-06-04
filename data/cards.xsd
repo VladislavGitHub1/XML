@@ -16,8 +16,14 @@
             <xsd:element name="author" type="author" maxOccurs="unbounded"/>
             <xsd:element name="valuable" maxOccurs="1"/>
         </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="id" type="xsd:ID" use="required"/>
+        <xsd:attribute name="barcode" type="barcode" use="optional"/>
     </xsd:complexType>
+    <xsd:simpleType name="barcode">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]+[0-9]+\.[a-z]"/>
+        </xsd:restriction>
+    </xsd:simpleType>
     <xsd:simpleType name="country">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="Belarus"/>
