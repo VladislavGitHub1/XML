@@ -2,6 +2,7 @@ package com.chernenkov.xml;
 
 import com.chernenkov.xml.builder.impl.CardsDomBuilder;
 import com.chernenkov.xml.builder.impl.CardsSaxBuilder;
+import com.chernenkov.xml.parser.ConsoleCardHandler;
 import com.chernenkov.xml.validator.XmlValidator;
 
 public class Main {

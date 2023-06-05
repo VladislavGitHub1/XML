@@ -1,5 +1,7 @@
 package com.chernenkov.xml.validator;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -13,6 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class XmlValidator {
+    static Logger logger = LogManager.getLogger();
 
     String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
     String fileName = "data/cards.xml";
@@ -27,10 +30,10 @@ public class XmlValidator {
             validator.setErrorHandler(new CardErrorHandler());
             validator.validate(source);
         } catch (FileNotFoundException e){
-            System.out.println("file is not found");
+           logger.error("file is not found");
         }
         catch (SAXException | IOException e) {
-            System.err.println(fileName + " is not correct or valid");
+           logger.error(fileName + " is not correct or valid");
         }
     }
 }

@@ -3,6 +3,7 @@ package com.chernenkov.xml.builder;
 public enum CardXmlTag {
     CARDS("cards"),
     ID("id"),
+    BARCODE("barcode"),
     THEMA("thema"),
     TYPE("type"),
     COUNTRY("country"),

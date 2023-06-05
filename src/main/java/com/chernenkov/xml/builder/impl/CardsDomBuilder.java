@@ -2,6 +2,8 @@ package com.chernenkov.xml.builder.impl;
 
 import com.chernenkov.xml.builder.CardsBuilder;
 import com.chernenkov.xml.entity.Card;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,6 +18,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class CardsDomBuilder implements CardsBuilder {
+    static Logger logger = LogManager.getLogger();
     private Set<Card> cards;
     private DocumentBuilder docBuilder;
 
@@ -25,7 +28,7 @@ public class CardsDomBuilder implements CardsBuilder {
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
-            e.printStackTrace();
+           logger.warn(e);
         }
     }
 
@@ -45,7 +48,7 @@ public class CardsDomBuilder implements CardsBuilder {
                 cards.add(card);
             }
         } catch (IOException | SAXException e) {
-            e.printStackTrace();
+            logger.warn(e);
         }
     }
 

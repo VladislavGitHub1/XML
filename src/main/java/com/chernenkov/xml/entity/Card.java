@@ -15,6 +15,7 @@ public class Card {
     public Card() {
     }
 
+
     public Card(String id, String barcode, String thema, String type, String country, int year, Author author, boolean valuable) {
         this.id = id;
         this.thema = thema;
